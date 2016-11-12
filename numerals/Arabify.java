@@ -1,21 +1,9 @@
 package numerals;
-import java.util.HashMap;
 
 public class Arabify
 {
 
-	HashMap<String, Integer> numberMap = new HashMap<String, Integer>();
-
-	Arabify()
-	{
-		numberMap.put("I",1);
-		numberMap.put("V",5);
-		numberMap.put("X",10);
-		numberMap.put("L",50);
-		numberMap.put("C",100);
-		numberMap.put("D",500);
-		numberMap.put("M",1000);
-	}
+	NumberMap numberMap = new NumberMap();
     
     public int toArab(String r)
 	{
@@ -60,14 +48,6 @@ public class Arabify
             s.set(false);
             return thisArabicValue;
         }
-    }
-
-
-    private class MutableBoolean{
-        boolean b;
-        MutableBoolean(boolean v){b=v;}
-        private void set(boolean v){b=v;}
-        private boolean get(){return(b);}
     }
 
 }

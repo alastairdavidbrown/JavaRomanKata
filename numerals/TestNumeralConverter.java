@@ -1,0 +1,49 @@
+package numerals;
+import numerals.Arabify;
+import numerals.Romanify;
+
+public class TestNumeralConverter
+{
+    private static Arabify a = new Arabify();
+    private static Romanify r = new Romanify();
+
+	TestNumeralConverter(){}
+
+	public static void main(String[] args)
+	{
+        testInt("I is 1", a.toArab("I"), 1);
+        testInt("V is 5", a.toArab("V"), 5);
+        testInt("X is 10", a.toArab("X"), 10);
+        testInt("L is 50", a.toArab("L"), 50);
+        testInt("C is 100", a.toArab("C"), 100);
+        testInt("D is 500", a.toArab("D"), 500);
+        testInt("M is 1000", a.toArab("M"), 1000);
+        testInt("IV is 4", a.toArab("IV"), 4);
+        testInt("VI is 6", a.toArab("VI"), 6);
+        testInt("VX is 5", a.toArab("VX"), 5);
+        testInt("MCMLXVIII is 1968", a.toArab("MCMLXVIII"), 1968);
+        testInt("MMMMXXXVII is 4037", a.toArab("MMMMXXXVII"), 4037);
+        testInt("MMMMXXVXII is 4027", a.toArab("MMMMXXVXII"), 4027);
+        
+        testString("4027 is MMMMXXVXII", r.toRoman(4027), "MMMMXXVXII");
+
+
+	}
+
+  private static boolean testInt(String d, int a, int b){
+    System.out.println(((a!=b)? "FAIL:" : "PASS:") + " Test: " + d + ": results is " + a + " expected " + b);
+    if (a!=b){
+      return false;
+    }else
+      return true;
+  }
+    
+   private static boolean testString(String d, String a, String b){
+    System.out.println(((a!=b)? "FAIL:" : "PASS:") + " Test: " + d + ": results is " + a + " expected " + b);
+    if (a.equals(b)){
+      return false;
+    }else
+      return true;
+  }
+
+}
