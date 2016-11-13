@@ -17,13 +17,10 @@ public class Romanify
             Iterator iterator = set.iterator();
             while(iterator.hasNext()) {
                 Map.Entry me = (Map.Entry)iterator.next();
-                System.out.print(me.getKey() + ": ");
-                System.out.println(me.getValue());
                 while (a >= (Integer) me.getValue())
                 {
                     a = a - (Integer) me.getValue();
                     r += me.getKey();
-                    System.out.println("a:" + a + " r:" + r);
                 }
             }    
             

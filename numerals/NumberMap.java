@@ -24,12 +24,18 @@ public class NumberMap
 	NumberMap()
 	{
 		numberMap.put("I",1);
-		numberMap.put("V",5);
+		numberMap.put("IV",4);
+        numberMap.put("V",5);
+        numberMap.put("VX",9);
 		numberMap.put("X",10);
+        numberMap.put("XL",40);
 		numberMap.put("L",50);
 		numberMap.put("C",100);
+        numberMap.put("CD",400);
 		numberMap.put("D",500);
+        numberMap.put("CM",900);
 		numberMap.put("M",1000);
+        
 	}
     
     public int get(String r){return numberMap.get(r);}
