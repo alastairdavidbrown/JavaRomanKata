@@ -21,6 +21,7 @@ public class TestNumeralConverter
         testInt("IV is 4", a.toArab("IV"), 4);
         testInt("VI is 6", a.toArab("VI"), 6);
         testInt("VX is 5", a.toArab("VX"), 5);
+        testInt("IX is 9", a.toArab("IX"), 9);
         testInt("MCMLXVIII is 1968", a.toArab("MCMLXVIII"), 1968);
         testInt("MMMMXXXVII is 4037", a.toArab("MMMMXXXVII"), 4037);      
         testString("1968 is MCMLXVIII", r.toRoman(1968), "MCMLXVIII");

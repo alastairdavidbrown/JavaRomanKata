@@ -26,7 +26,7 @@ public class NumberMap
 		numberMap.put("I",1);
 		numberMap.put("IV",4);
         numberMap.put("V",5);
-        numberMap.put("VX",9);
+        numberMap.put("IX",9);
 		numberMap.put("X",10);
         numberMap.put("XL",40);
 		numberMap.put("L",50);
