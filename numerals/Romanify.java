@@ -9,23 +9,21 @@ public class Romanify
 
 	NumberMap numberMap = new NumberMap();
     
-    public String toRoman(int a)
+    public String toRoman(int arabicValue)
 	{
             numberMap.sortDesc();
-            String r = new String();
+            String romanNumber = new String();
             Set set = numberMap.getMap().entrySet();
             Iterator iterator = set.iterator();
             while(iterator.hasNext()) {
-                Map.Entry me = (Map.Entry)iterator.next();
-                while (a >= (Integer) me.getValue())
+                Map.Entry thisValueMap = (Map.Entry)iterator.next();
+                while (arabicValue >= (Integer) thisValueMap.getValue())
                 {
-                    a = a - (Integer) me.getValue();
-                    r += me.getKey();
+                    arabicValue -= (Integer) thisValueMap.getValue();
+                    romanNumber += thisValueMap.getKey();
                 }
             }    
-            
-
-            return (r);
+            return (romanNumber);
 	}
 
 }
